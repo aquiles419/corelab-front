@@ -12,17 +12,20 @@ interface AddCardFormProps {
 }
 
 const FormContainer = styled.div`
-  width: 530.52px;
-  height: 103.36px;
+  width: 390px;
+  height: auto;
   background-color: #fff;
-  border-radius: 3px 0 0 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 16px auto;
+  border-radius: 25px;
+  margin: 16px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  opacity: 1;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+  text-align: left;
 `;
 
 const Form = styled.form`
@@ -47,6 +50,7 @@ const Button = styled.button`
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
+
   &:hover {
     background-color: #0056b3;
   }
@@ -59,6 +63,7 @@ const AddCardForm: React.FC<AddCardFormProps> = ({ onAddCard }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newCard = {
+      id: Date.now(),
       name: title,
       description,
       favorite: false,
@@ -69,7 +74,7 @@ const AddCardForm: React.FC<AddCardFormProps> = ({ onAddCard }) => {
       .then((response) => {
         setTitle("");
         setDescription("");
-        onAddCard(response.data); // Chama a função de callback com o novo card
+        onAddCard(response.data);
       })
       .catch((error) => {
         console.error("There was an error creating the card!", error);

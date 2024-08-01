@@ -12,7 +12,6 @@
   box-sizing: border-box;
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -33,6 +32,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .App-link {
@@ -45,5 +46,232 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Custom CSS for card component */
+.StyledCard {
+  width: 100%;
+  max-width: 390px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+  text-align: left;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .StyledCard {
+    margin: 8px;
+    padding: 12px;
+  }
+}
+
+.CardTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CardTitle {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14.2px;
+  font-weight: 700;
+  line-height: 15.73px;
+  flex: 1;
+}
+
+.Divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 15px 0;
+  width: calc(100% + 32px);
+  position: relative;
+  left: -16px;
+}
+
+@media (max-width: 768px) {
+  .Divider {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.CardDescription {
+  flex: 1;
+  margin: 0;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+}
+
+.IconContainer {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .IconContainer {
+    bottom: 12px;
+    left: 12px;
+  }
+}
+
+.IconContainerRight {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .IconContainerRight {
+    bottom: 20px;
+    right: 12px;
+  }
+}
+
+.EditIconStyled {
+  width: 24px;
+  height: 24px;
+  padding: 3.5px;
+  opacity: 1;
+}
+
+.EditIconStyled:hover {
+  opacity: 0.7;
+}
+
+.ColorIconStyled {
+  width: 18px;
+  height: 17px;
+  opacity: 1;
+}
+
+.ColorIconStyled:hover {
+  opacity: 0.7;
+}
+
+.DeleteIconStyled {
+  width: 18px;
+  height: 18px;
+  padding: 3.5px;
+  opacity: 1;
+}
+
+.DeleteIconStyled:hover {
+  opacity: 0.7;
+}
+
+.FavoriteIconStyled {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.FormContainer {
+  width: 100%;
+  max-width: 390px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .FormContainer {
+    margin: 8px;
+    padding: 12px;
+  }
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.Input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #0056b3;
+}
+
+.DashboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.CardRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .CardRow {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.SectionTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: left;
+  margin: 0;
+  padding: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .SectionTitle {
+    text-align: center;
   }
 }
